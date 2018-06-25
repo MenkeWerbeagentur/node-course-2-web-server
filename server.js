@@ -44,6 +44,13 @@ app.get("/about", (req,res) => {
     });
 });
 
+app.get("/projects", (req, res) => {
+    res.rendet("projects.hbs", {
+        pageTitle:"Projekte",
+        message: "projekte hier"
+    });
+});
+
 app.get("/bad", (req,res) => {
     res.send({
         error: "Fehler 123"
